@@ -1,10 +1,17 @@
-package com.prueba110426.PruebaTecnicaSupermercado.controller;
+package com.prueba110426.PruebaTecnicaSupermercado.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class DetalleVenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +24,7 @@ public class DetalleVenta {
     //Producto
     @ManyToOne
     private Producto prod;
+    
     private Integer cantProd;
     private Double precio;
 }
