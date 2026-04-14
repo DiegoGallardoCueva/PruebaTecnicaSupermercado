@@ -1,5 +1,6 @@
 package com.prueba110426.PruebaTecnicaSupermercado.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 public class Sucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
